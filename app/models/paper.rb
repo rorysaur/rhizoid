@@ -10,6 +10,6 @@ class Paper < ActiveRecord::Base
   validates_attachment_content_type :file, :content_type => ["application/pdf"]
   validates_attachment :file,
     :presence => true,
-    :content_type => ["application/pdf"],
+    :content_type => { :content_type => ["application/pdf"] },
     :size => { :less_than => 4.megabytes }
 end
