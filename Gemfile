@@ -33,7 +33,7 @@ gem 'paperclip'
 gem 'aws-sdk'
 
 group :development do
-  gem 'guard'
+  gem 'guard-rails'
 end
 
 # Use ActiveModel has_secure_password
