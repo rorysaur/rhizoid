@@ -31,6 +31,7 @@ gem 'figaro'
 gem 'pg_search'
 gem 'paperclip'
 gem 'aws-sdk'
+gem 'hypdf'
 
 group :development do
   gem 'guard-rails'
