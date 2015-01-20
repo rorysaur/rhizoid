@@ -1,0 +1,4 @@
+<h2>rhizoid</h2>
+<% @papers.try(:each) do |paper| %>
+  <p><%= link_to paper.title, paper %></p>
+<% end %>

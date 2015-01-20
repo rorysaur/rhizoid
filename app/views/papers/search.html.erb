@@ -1,0 +1,10 @@
+<%= form_tag("/papers/search", method: "get") do %>
+  <%= text_field_tag(:search_text) %>
+  <%= submit_tag("Search") %>
+<% end %>
+<% @papers.try(:each) do |paper| %>
+  <p><%= link_to paper.title, paper %></p>
+<% end %>
+<% if @papers.empty? %>
+  <p>No papers found.</p>
+<% end %>
