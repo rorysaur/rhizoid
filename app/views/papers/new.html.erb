@@ -1,0 +1,7 @@
+<%= form_for @paper, :url => papers_path, :html => { :multipart => true } do |form| %>
+  Title
+  <%= form.text_field :title %>
+  Author
+  <%= form.text_field :author_name %>
+  <%= form.file_field :file %>
+<% end %>
