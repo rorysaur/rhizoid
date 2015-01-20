@@ -1,6 +1,10 @@
 # encoding: utf-8
 
 class PapersController < ApplicationController
+  def index
+    @papers = Paper.all
+  end
+
   def new
     @paper = Paper.new
   end
@@ -31,6 +35,15 @@ class PapersController < ApplicationController
   def show
     @paper = Paper.find(params[:id])
     render :show
+  end
+
+  def search
+    if params[:search_text]
+      @papers = Paper.search_by_all(params[:search_text])
+    else
+      @papers = []
+    end
+    render :search
   end
 
   private
